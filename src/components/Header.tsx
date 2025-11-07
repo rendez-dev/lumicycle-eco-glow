@@ -20,24 +20,34 @@ export const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
-            <img 
-              src={logo} 
-              alt="LUMICYCLE Logo" 
-              className="w-12 h-12 object-contain animate-glow"
-            />
-            <div className="flex flex-col">
-              <span className="text-xl font-bold tracking-wider bg-gradient-glow bg-clip-text text-transparent">
-                LUMICYCLE
-              </span>
-              <span className="text-xs text-muted-foreground tracking-widest">
-                BE LUMINOUS WITH RECYCLE
-              </span>
-            </div>
-          </Link>
+<Link to="/" className="relative flex items-center justify-center gap-2">
+  {/* Logo container */}
+  <div className="relative flex items-center justify-center group">
+    {/* Teks di tengah logo */}
+    <span
+      className="absolute text-[10px] sm:text-xs text-pink-300 tracking-widest text-center"
+      style={{ top: "15%", left: "50%", transform: "translateX(-50%)" }}
+    />
+
+    {/* Logo */}
+    <img
+      src={logo}
+      alt="LUMICYCLE Logo"
+      className="h-20 sm:h-24 w-auto object-contain transition-all duration-300 group-hover:scale-105"
+    />
+  </div>
+  <div className="flex flex-col justify-center -ml-1 space-y-0.5">
+    <span className="text-xl font-bold tracking-wider text-muted-foreground">
+      LUMICYCLE
+    </span>
+    <span className="text-xs text-muted-foreground tracking-widest">
+      Be Luminous with Recycle
+    </span>
+  </div>
+</Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-10">
             {navItems.map((item) => (
               <Link
                 key={item.path}
@@ -57,7 +67,7 @@ export const Header = () => {
           <div className="flex items-center gap-4">
             <Link to="/cart">
               <Button variant="ghost" size="icon" className="relative hover:bg-secondary">
-                <ShoppingCart className="h-5 w-5" />
+                <ShoppingCart className="h-10 w-10" />
                 <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-xs rounded-full w-5 h-5 flex items-center justify-center">
                   0
                 </span>

@@ -35,7 +35,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden grid-pattern">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden grid-pattern -mt-20">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background"></div>
         
         {/* Decorative Elements */}
@@ -44,37 +44,39 @@ export default function Home() {
         <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-neon-orange/20 rounded-full blur-3xl animate-float" style={{ animationDelay: "2s" }}></div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center space-y-8 animate-slideUp">
+          <div className="max-w-4xl mx-auto text-center space-y-3 animate-slideUp">
             {/* Logo */}
-            <div className="flex justify-center mb-6">
+            <div className="flex justify-center">
               <img 
-                src={logo} 
-                alt="LUMICYCLE Logo" 
-                className="w-32 h-32 md:w-40 md:h-40 object-contain animate-glow"
+              src={logo} 
+              alt="LUMICYCLE Logo" 
+              className="w-64 h-64 md:w-72 md:h-72 lg:w-96 lg:h-96 object-contain hover:animate-pulse transition-all duration-300"
               />
             </div>
+
+            <div className="flex flex-col items-center -mt-20">
+              <h1 className="text-10xl md:text-7xl font-bold tracking-tight">
+                <span className="bg-gradient-glow bg-clip-text text-transparent">
+                  LUMICYCLE
+                </span>
+              </h1>
+              
+              <p className="text-xl md:text-2xl text-muted-foreground font-light tracking-wider mt-2">
+                Be Luminous with Recycle
+              </p>
+              
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mt-4">
+                Produk ramah lingkungan yang bercahaya. Kami percaya bahwa keberlanjutan
+                bisa indah, modern, dan menginspirasi.
+              </p>
+            </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-              <span className="bg-gradient-glow bg-clip-text text-transparent">
-                LUMICYCLE
-              </span>
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-muted-foreground font-light tracking-wider">
-              Be Luminous with Recycle
-            </p>
-            
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Produk ramah lingkungan yang bercahaya. Kami percaya bahwa keberlanjutan
-              bisa indah, modern, dan menginspirasi.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6">
               <Link to="/shop">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 group">
-                  Shop Now
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </Button>
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 group">
+                Shop Now
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
               </Link>
               <Link to="/about">
                 <Button size="lg" variant="outline" className="border-border hover:border-primary px-8">
