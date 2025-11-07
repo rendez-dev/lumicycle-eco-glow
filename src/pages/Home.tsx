@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ProductCard } from "@/components/ProductCard";
 import { Link } from "react-router-dom";
 import { ArrowRight, Recycle, Lightbulb, Heart } from "lucide-react";
+import logo from "@/assets/lumicycle-logo.png";
 
 const featuredProducts = [
   {
@@ -46,9 +47,11 @@ export default function Home() {
           <div className="max-w-4xl mx-auto text-center space-y-8 animate-slideUp">
             {/* Logo */}
             <div className="flex justify-center mb-6">
-              <div className="w-24 h-24 rounded-full bg-gradient-glow flex items-center justify-center animate-glow">
-                <span className="text-5xl">🪼</span>
-              </div>
+              <img 
+                src={logo} 
+                alt="LUMICYCLE Logo" 
+                className="w-32 h-32 md:w-40 md:h-40 object-contain animate-glow"
+              />
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight">

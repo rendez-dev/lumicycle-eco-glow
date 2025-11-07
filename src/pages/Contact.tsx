@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Instagram, MapPin } from "lucide-react";
+import { Mail, Instagram, MapPin, MessageCircle } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -104,6 +104,26 @@ export default function Contact() {
               <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
               
               <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-gradient-glow flex items-center justify-center flex-shrink-0">
+                    <MessageCircle className="h-6 w-6 text-primary-foreground" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold mb-2">WhatsApp</h3>
+                    <a 
+                      href="https://wa.me/6281234567890?text=Halo%20LUMICYCLE%2C%20saya%20ingin%20bertanya%20tentang%20produk%20Anda" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-block"
+                    >
+                      <Button className="bg-[#25D366] hover:bg-[#20BA5A] text-white w-full sm:w-auto">
+                        <MessageCircle className="mr-2 h-4 w-4" />
+                        Chat di WhatsApp
+                      </Button>
+                    </a>
+                  </div>
+                </div>
+
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-full bg-gradient-glow flex items-center justify-center flex-shrink-0">
                     <Mail className="h-6 w-6 text-primary-foreground" />

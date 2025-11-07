@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { ShoppingCart, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import logo from "@/assets/lumicycle-logo.png";
 
 export const Header = () => {
   const location = useLocation();
@@ -20,9 +21,11 @@ export const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-12 h-12 rounded-full bg-gradient-glow flex items-center justify-center animate-glow">
-              <span className="text-2xl">🪼</span>
-            </div>
+            <img 
+              src={logo} 
+              alt="LUMICYCLE Logo" 
+              className="w-12 h-12 object-contain animate-glow"
+            />
             <div className="flex flex-col">
               <span className="text-xl font-bold tracking-wider bg-gradient-glow bg-clip-text text-transparent">
                 LUMICYCLE

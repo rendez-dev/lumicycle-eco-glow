@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Instagram, Mail } from "lucide-react";
+import logo from "@/assets/lumicycle-logo.png";
 
 export const Footer = () => {
   return (
@@ -9,9 +10,11 @@ export const Footer = () => {
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-full bg-gradient-glow flex items-center justify-center animate-glow">
-                <span className="text-xl">🪼</span>
-              </div>
+              <img 
+                src={logo} 
+                alt="LUMICYCLE Logo" 
+                className="w-10 h-10 object-contain animate-glow"
+              />
               <div className="flex flex-col">
                 <span className="text-lg font-bold tracking-wider bg-gradient-glow bg-clip-text text-transparent">
                   LUMICYCLE
