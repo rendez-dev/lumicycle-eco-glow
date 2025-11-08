@@ -10,7 +10,7 @@ const featuredProducts = [
     name: "EcoGlow Bottle",
     description: "Botol minum LED daur ulang dengan teknologi self-cleaning UV",
     price: 299000,
-    image: "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=800&q=80",
+    image: "https://asset.kompas.com/crops/MdEZZcFYItIBmM808EQXOrL6_L0=/0x0:4664x3109/1200x800/data/photo/2025/03/04/67c6a70245c01.jpg",
     category: "Bottles"
   },
   {
