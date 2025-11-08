@@ -130,29 +130,29 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="text-center space-y-4 p-6 rounded-xl gradient-card border border-border hover:border-primary/50 transition-all">
-              <div className="w-16 h-16 mx-auto rounded-full bg-gradient-glow flex items-center justify-center">
-                <Recycle className="h-8 w-8 text-primary-foreground" />
+            <div className="text-center space-y-3 p-6 rounded-xl gradient-card border border-border hover:border-primary/50 transition-all">
+              <div className="w-12 h-12 mx-auto rounded-full bg-gradient-glow flex items-center justify-center">
+                <Recycle className="h-6 w-6 text-primary-foreground" />
               </div>
-              <h3 className="text-xl font-semibold">100% Recycled</h3>
+              <h3 className="text-lg font-semibold">100% Recycled</h3>
               <p className="text-sm text-muted-foreground">
                 Semua produk dibuat dari bahan daur ulang berkualitas tinggi
               </p>
             </div>
             
-            <div className="text-center space-y-4 p-6 rounded-xl gradient-card border border-border hover:border-primary/50 transition-all">
-              <div className="w-16 h-16 mx-auto rounded-full bg-gradient-glow flex items-center justify-center">
-                <Lightbulb className="h-8 w-8 text-primary-foreground" />
+            <div className="text-center space-y-3 p-6 rounded-xl gradient-card border border-border hover:border-primary/50 transition-all">
+              <div className="w-12 h-12 mx-auto rounded-full bg-gradient-glow flex items-center justify-center">
+                <Lightbulb className="h-6 w-6 text-primary-foreground" />
               </div>
-              <h3 className="text-xl font-semibold">Innovative Design</h3>
+              <h3 className="text-lg font-semibold">Innovative Design</h3>
               <p className="text-sm text-muted-foreground">
                 Teknologi modern bertemu dengan estetika futuristik
               </p>
             </div>
             
-            <div className="text-center space-y-4 p-6 rounded-xl gradient-card border border-border hover:border-primary/50 transition-all">
-              <div className="w-16 h-16 mx-auto rounded-full bg-gradient-glow flex items-center justify-center">
-                <Heart className="h-8 w-8 text-primary-foreground" />
+            <div className="text-center space-y-3 p-6 rounded-xl gradient-card border border-border hover:border-primary/50 transition-all">
+              <div className="w-12 h-12 mx-auto rounded-full bg-gradient-glow flex items-center justify-center">
+                <Heart className="h-6 w-6 text-primary-foreground" />
               </div>
               <h3 className="text-xl font-semibold">Made with Love</h3>
               <p className="text-sm text-muted-foreground">

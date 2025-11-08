@@ -33,14 +33,14 @@ export const Header = () => {
     <img
       src={logo}
       alt="LUMICYCLE Logo"
-      className="h-20 sm:h-24 w-auto object-contain transition-all duration-300 group-hover:scale-105"
+      className="h-12 sm:h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105"
     />
   </div>
-  <div className="flex flex-col justify-center -ml-1 space-y-0.5">
-    <span className="text-xl font-bold tracking-wider text-muted-foreground">
+  <div className="flex flex-col justify-center space-y-0.5">
+    <span className="text-lg sm:text-xl font-bold tracking-wider text-muted-foreground">
       LUMICYCLE
     </span>
-    <span className="text-xs text-muted-foreground tracking-widest">
+    <span className="text-[10px] sm:text-xs text-muted-foreground tracking-widest">
       Be Luminous with Recycle
     </span>
   </div>

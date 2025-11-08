@@ -46,7 +46,7 @@ export default function About() {
             </div>
             <h3 className="text-xl font-bold">Sustainability First</h3>
             <p className="text-muted-foreground">
-              100% bahan daur ulang dan proses produksi yang ramah lingkungan
+              Berasal bahan daur ulang dan proses produksi yang ramah lingkungan
             </p>
           </div>
 
@@ -113,7 +113,7 @@ export default function About() {
                 <div>
                   <h3 className="font-bold mb-2">Design & Manufacturing</h3>
                   <p className="text-sm text-muted-foreground">
-                    Tim desainer kami menciptakan produk unik dengan teknologi LED dan smart features
+                  Kami menciptakan produk unik dengan teknologi LED dan smart features
                   </p>
                 </div>
               </div>

@@ -9,17 +9,17 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center gap-1 mb-3">
               <img 
                 src={logo} 
                 alt="LUMICYCLE Logo" 
-                className="w-10 h-10 object-contain animate-glow"
+                className="w-12 h-14 object-contain animate-glow"
               />
               <div className="flex flex-col">
                 <span className="text-lg font-bold tracking-wider bg-gradient-glow bg-clip-text text-transparent">
                   LUMICYCLE
                 </span>
-                <span className="text-xs text-muted-foreground">
+                <span className="text-sm text-muted-foreground tracking-wide">
                   Be Luminous with Recycle
                 </span>
               </div>
