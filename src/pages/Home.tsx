@@ -18,7 +18,7 @@ const featuredProducts = [
     name: "Luminous Tote Bag",
     description: "Tas belanja dengan reflective strips dari bahan daur ulang",
     price: 199000,
-    image: "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=800&q=80",
+    image: "https://monitorindonesia.com/storage/news/image/bahlil-9.webp",
     category: "Bags"
   },
   {
