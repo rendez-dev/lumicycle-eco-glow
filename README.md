@@ -1,6 +1,6 @@
 # Lumicycle Eco-Glow
 
-Project ini adalah aplikasi web modern yang dibangun dengan tumpukan teknologi Vite, React, TypeScript, dan shadcn/ui. Dibuat sebagai bagian dari [masukkan tujuan project di sini, misal: platform e-commerce, dasbor, dll.].
+Project ini adalah aplikasi web modern yang dibangun dengan tumpukan teknologi Vite, React, TypeScript, dan shadcn/ui. Dibuat sebagai bagian dari tugas.
 
 ## Fitur Utama
 
