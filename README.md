@@ -1,73 +1,116 @@
-# Welcome to your Lovable project
+# Lumicycle Eco-Glow
 
-## Project info
+Project ini adalah aplikasi web modern yang dibangun dengan tumpukan teknologi Vite, React, TypeScript, dan shadcn/ui. Dibuat sebagai bagian dari [masukkan tujuan project di sini, misal: platform e-commerce, dasbor, dll.].
 
-**URL**: https://lovable.dev/projects/ac926b17-39c7-4d7b-a7fb-bd66940f6b2c
+## Fitur Utama
 
-## How can I edit this code?
+* **Frontend Cepat:** Dibangun di atas **Vite** untuk pengembangan dan build yang sangat cepat.
+* **UI Modern:** Menggunakan **React** dan **TypeScript** untuk UI yang kuat dan dapat dikelola.
+* **Komponen UI:** Didesain dengan indah menggunakan **shadcn/ui**, yang dibangun di atas Radix UI dan Tailwind CSS.
+* **Routing:** Navigasi sisi klien ditangani oleh **React Router**.
+* **Manajemen State:** Menggunakan **TanStack Query** (React Query) untuk pengambilan, caching, dan pembaruan data asinkron.
+* **Validasi Form:** Validasi skema yang tangguh dengan **React Hook Form** dan **Zod**.
+* **Visualisasi Data:** Termasuk **Recharts** untuk membuat bagan dan grafik interaktif.
+* **Styling:** Sepenuhnya di-style dengan **Tailwind CSS** untuk utilitas CSS yang cepat dan responsif.
 
-There are several ways of editing your application.
+## Teknologi yang Digunakan
 
-**Use Lovable**
+* **Framework:** React 18
+* **Bundler:** Vite
+* **Bahasa:** TypeScript
+* **Styling:** Tailwind CSS
+* **Komponen UI:** shadcn/ui
+* **Routing:** React Router DOM (v6)
+* **Manajemen State Server:** @tanstack/react-query
+* **Formulir:** React Hook Form & Zod
+* **Linting:** ESLint & TypeScript ESLint
+* **Lainnya:** Lucide (ikon), date-fns, recharts, sonner (notifikasi toast)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/ac926b17-39c7-4d7b-a7fb-bd66940f6b2c) and start prompting.
+## Prasyarat Instalasi
 
-Changes made via Lovable will be committed automatically to this repo.
+Sebelum memulai, pastikan Anda telah menginstal perangkat lunak berikut di mesin Anda:
 
-**Use your preferred IDE**
+* **Node.js:** (Direkomendasikan v18.x atau v20.x ke atas)
+* **npm** (atau package manager lain seperti `yarn` atau `pnpm`)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Panduan Instalasi dan Penggunaan
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Untuk menjalankan proyek ini secara lokal, ikuti langkah-langkah berikut:
 
-Follow these steps:
+1.  **Clone Repository**
+    ```sh
+    git clone [https://github.com/](https://github.com/)[USERNAME_ANDA]/[NAMA_REPOSITORY_ANDA].git
+    ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+2.  **Masuk ke Direktori Proyek**
+    ```sh
+    cd [NAMA_REPOSITORY_ANDA]
+    ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+3.  **Install Dependensi**
+    Gunakan npm untuk menginstal semua dependensi yang terdaftar di `package.json`.
+    ```sh
+    npm install
+    ```
 
-# Step 3: Install the necessary dependencies.
-npm i
+4.  **Jalankan Server Pengembangan**
+    Perintah ini akan menjalankan aplikasi dalam mode pengembangan dengan hot-reloading.
+    ```sh
+    npm run dev
+    ```
+    Buka [http://localhost:5173](http://localhost:5173) (atau port lain yang ditampilkan di terminal) di browser Anda.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+5.  **Build untuk Produksi**
+    Untuk membuat build produksi yang dioptimalkan:
+    ```sh
+    npm run build
+    ```
+    File build akan berada di direktori `dist/`.
 
-**Edit a file directly in GitHub**
+6.  **Jalankan Linting**
+    Untuk memeriksa masalah gaya dan kualitas kode:
+    ```sh
+    npm run lint
+    ```
+## Kontribusi
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Kami sangat terbuka untuk kontribusi! Jika Anda ingin membantu meningkatkan proyek ini, silakan:
 
-**Use GitHub Codespaces**
+1.  **Fork** repository ini.
+2.  Buat *branch* fitur baru (`git checkout -b fitur/NamaFiturAnda`).
+3.  **Commit** perubahan Anda (`git commit -m 'Menambahkan fitur baru'`).
+4.  **Push** ke *branch* Anda (`git push origin fitur/NamaFiturAnda`).
+5.  Buka **Pull Request** ke *branch* `main` dari repository ini.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Harap pastikan kode Anda mematuhi standar linting yang ada dengan menjalankan `npm run lint` sebelum melakukan *commit*.
 
-## What technologies are used for this project?
+## Lisensi
 
-This project is built with:
+Proyek ini dilisensikan di bawah **Lisensi MIT**. Lihat file `LICENSE` (atau teks di bawah) untuk detail lengkap.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+---
 
-## How can I deploy this project?
+**MIT License**
 
-Simply open [Lovable](https://lovable.dev/projects/ac926b17-39c7-4d7b-a7fb-bd66940f6b2c) and click on Share -> Publish.
+Copyright (c) 2025 [Masukkan Nama Anda atau Nama Organisasi Anda Di Sini]
 
-## Can I connect a custom domain to my Lovable project?
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-Yes, you can!
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+## Susunan Proyek
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Struktur file utama proyek ini adalah sebagai berikut:
