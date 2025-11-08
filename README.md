@@ -92,7 +92,7 @@ Proyek ini dilisensikan di bawah **Lisensi MIT**. Lihat file `LICENSE` (atau tek
 
 **MIT License**
 
-Copyright (c) 2025 [Masukkan Nama Anda atau Nama Organisasi Anda Di Sini]
+Copyright (c) 2025 [rendez-dev]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -111,6 +111,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-## Susunan Proyek
-
-Struktur file utama proyek ini adalah sebagai berikut:
