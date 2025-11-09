@@ -1,35 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { ProductCard } from "@/components/ProductCard";
+import { ProductGallery } from "@/components/ProductGallery";
 import { Link } from "react-router-dom";
-import { ArrowRight, Recycle, Lightbulb, Heart } from "lucide-react";
+import { ArrowRight, Recycle, Lightbulb, Heart, ShoppingCart, Star } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 import logo from "@/assets/lumicycle-logo.png";
-
-const featuredProducts = [
-  {
-    id: "1",
-    name: "EcoGlow Bottle",
-    description: "Botol minum LED daur ulang dengan teknologi self-cleaning UV",
-    price: 299000,
-    image: "https://asset.kompas.com/crops/MdEZZcFYItIBmM808EQXOrL6_L0=/0x0:4664x3109/1200x800/data/photo/2025/03/04/67c6a70245c01.jpg",
-    category: "Bottles"
-  },
-  {
-    id: "2",
-    name: "Luminous Tote Bag",
-    description: "Tas belanja dengan reflective strips dari bahan daur ulang",
-    price: 199000,
-    image: "https://monitorindonesia.com/storage/news/image/bahlil-9.webp",
-    category: "Bags"
-  },
-  {
-    id: "3",
-    name: "Neon Plant Pot",
-    description: "Pot tanaman biodegradable dengan glow-in-the-dark accent",
-    price: 149000,
-    image: "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=800&q=80",
-    category: "Home"
-  },
-];
+import { featuredProduct } from "@/data/product";
 
 export default function Home() {
   return (
@@ -88,32 +63,103 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Products */}
+      {/* Featured Product */}
       <section className="py-20 container mx-auto px-4">
         <div className="text-center mb-12 space-y-4">
           <h2 className="text-3xl md:text-4xl font-bold">
             <span className="bg-gradient-glow bg-clip-text text-transparent">
-              Featured Products
+              Featured Product
             </span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Koleksi pilihan produk daur ulang kami yang paling populer
+            Produk unggulan kami dengan berbagai sudut pandang
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {featuredProducts.map((product) => (
-            <ProductCard key={product.id} {...product} />
-          ))}
-        </div>
-        
-        <div className="text-center mt-12">
-          <Link to="/shop">
-            <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-              View All Products
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-          </Link>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            {/* Product Gallery */}
+            <div className="w-full">
+              <ProductGallery 
+                images={featuredProduct.images} 
+                productName={featuredProduct.name}
+              />
+            </div>
+            
+            {/* Product Details */}
+            <div className="space-y-6 lg:sticky lg:top-24">
+              <div>
+                <Badge variant="secondary" className="mb-3">
+                  {featuredProduct.category}
+                </Badge>
+                <h3 className="text-3xl font-bold mb-3">{featuredProduct.name}</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {featuredProduct.description}
+                </p>
+              </div>
+              
+              <div className="flex items-baseline gap-3">
+                <span className="text-4xl font-bold bg-gradient-glow bg-clip-text text-transparent">
+                  Rp {featuredProduct.price.toLocaleString('id-ID')}
+                </span>
+                <div className="flex items-center gap-1 text-yellow-500">
+                  <Star className="h-4 w-4 fill-current" />
+                  <Star className="h-4 w-4 fill-current" />
+                  <Star className="h-4 w-4 fill-current" />
+                  <Star className="h-4 w-4 fill-current" />
+                  <Star className="h-4 w-4 fill-current" />
+                  <span className="text-muted-foreground text-sm ml-1">(4.9)</span>
+                </div>
+              </div>
+              
+              <div className="space-y-3">
+                <h4 className="font-semibold text-lg">Features:</h4>
+                <ul className="space-y-2">
+                  {featuredProduct.features.slice(0, 5).map((feature, index) => (
+                    <li key={index} className="text-sm text-muted-foreground flex items-start gap-2">
+                      <span className="text-primary">✓</span>
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              <div className="space-y-3">
+                <h4 className="font-semibold text-lg">Specifications:</h4>
+                <div className="grid grid-cols-2 gap-3 text-sm">
+                  <div>
+                    <span className="text-muted-foreground">Material:</span>
+                    <p className="font-medium">{featuredProduct.specifications.material.split('+')[0]}</p>
+                  </div>
+                  <div>
+                    <span className="text-muted-foreground">Capacity:</span>
+                    <p className="font-medium">{featuredProduct.specifications.capacity}</p>
+                  </div>
+                  <div>
+                    <span className="text-muted-foreground">Weight:</span>
+                    <p className="font-medium">{featuredProduct.specifications.weight}</p>
+                  </div>
+                  <div>
+                    <span className="text-muted-foreground">Dimensions:</span>
+                    <p className="font-medium">{featuredProduct.specifications.dimensions}</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="flex gap-3 pt-4">
+                <Button size="lg" className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground group">
+                  <ShoppingCart className="mr-2 h-5 w-5 group-hover:animate-bounce" />
+                  Add to Cart
+                </Button>
+                <Link to="/shop" className="flex-1">
+                  <Button size="lg" variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                    View More
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
