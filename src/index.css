@@ -151,4 +151,61 @@ All colors MUST be HSL.
       linear-gradient(90deg, hsla(328 100% 54% / 0.05) 1px, transparent 1px);
     background-size: 50px 50px;
   }
+  
+  /* Scrollbar Styling */
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--primary)) hsl(var(--border));
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: hsl(var(--border));
+    border-radius: 100vh;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary));
+    border-radius: 100vh;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary) / 0.8);
+  }
+  
+  /* Swiper Custom Styling */
+  .thumbnail-swiper .swiper-slide {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+  
+  .thumbnail-swiper .swiper-slide-thumb-active {
+    opacity: 1;
+  }
+  
+  /* Image zoom cursor */
+  .swiper-zoom-container {
+    cursor: grab;
+  }
+  
+  .swiper-zoom-container:active {
+    cursor: grabbing;
+  }
+  
+  /* Smooth image loading */
+  img {
+    @apply transition-opacity duration-300;
+  }
+  
+  img[loading] {
+    @apply opacity-0;
+  }
+  
+  img.loaded {
+    @apply opacity-100;
+  }
 }
