@@ -23,7 +23,7 @@ export const featuredProduct: Product = {
   id: "ecoglow-bottle-001",
   name: "EcoGlow Bottle",
   description: "Botol minum LED daur ulang dengan teknologi self-cleaning UV. Inovasi terbaru dalam gaya hidup berkelanjutan yang menggabungkan fungsi, teknologi, dan estetika futuristik.",
-  price: 299000,
+  price: 100000,
   category: "Bottles",
   images: [
     {

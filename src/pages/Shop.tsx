@@ -70,7 +70,7 @@ export default function Shop() {
                 
                 <div className="space-y-4">
                   <div>
-                    <span className="text-4xl md:text-5xl font-bold bg-gradient-glow bg-clip-text text-transparent">
+                    <span className="text-4xl md:text-5xl font-bold bg-gradient-glow bg-clip-text text-primary">
                       Rp {featuredProduct.price.toLocaleString('id-ID')}
                     </span>
                     <p className="text-sm text-muted-foreground mt-1">Harga sudah termasuk PPN</p>
