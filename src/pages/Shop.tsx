@@ -73,11 +73,14 @@ export default function Shop() {
                     <div className="text-4xl md:text-5xl font-bold text-primary">
                     <span className="text-4xl md:text-5xl font-bold bg-gradient-glow bg-clip-text text-primary">
                       Rp {featuredProduct.price.toLocaleString('id-ID')}
+                      </span>
                     </div>
-                    <p className="text-sm text-muted-foreground mt-1">Harga sudah termasuk PPN</p>
+                    <p className="text-sm text-muted-foreground mt-1">
+                      Harga sudah termasuk PPN
+                      </p>
                   </div>
-
                   <Separator />
+
 
                   {/* Quantity Selector */}
                   <div className="flex items-center gap-4">
