@@ -37,7 +37,7 @@ export default function Shop() {
               {featuredProduct.name}
             </span>
           </h1>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+          <p className="text-foreground max-w-2xl mx-auto text-lg">
             {featuredProduct.description}
           </p>
         </div>
@@ -70,9 +70,9 @@ export default function Shop() {
                 
                 <div className="space-y-4">
                   <div>
-                    <span className="text-4xl md:text-5xl font-bold bg-gradient-glow bg-clip-text text-transparent">
+                    <div className="text-4xl md:text-5xl font-bold text-primary">
                       Rp {featuredProduct.price.toLocaleString('id-ID')}
-                    </span>
+                    </div>
                     <p className="text-sm text-muted-foreground mt-1">Harga sudah termasuk PPN</p>
                   </div>
 
