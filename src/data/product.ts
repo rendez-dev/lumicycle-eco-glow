@@ -35,8 +35,8 @@ export const featuredProduct: Product = {
     },
     {
       id: "img-2",
-      url: "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=800&q=80",
-      angle: "Side Profile",
+      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJeHY9pgX79xfu-aLyC_VpRrqWUu-RpyE1yQ&s",
+      angle: "fufufafa",
       altText: "EcoGlow Bottle tampak samping",
     },
     {
