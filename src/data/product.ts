@@ -94,14 +94,6 @@ export const featuredProduct: Product = {
     capacity: "500ml",
     technology: "UV-C LED Self-Cleaning System",
   },
-  <div className="max-w-4xl mx-auto mb-20">
-          <div className="gradient-card rounded-2xl p-8 md:p-12 border border-border">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-full bg-gradient-glow flex items-center justify-center">
-                <Sparkles className="h-6 w-6 text-primary-foreground" />
-              </div>
-              <h2 className="text-2xl font-bold">Our Story</h2>
-            </div>
   storyTitle: "Our Mission",
   story: `
     EcoGlow Bottle lahir dari visi untuk mengubah sampah plastik menjadi produk yang tidak hanya fungsional, 
