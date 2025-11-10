@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { ShoppingCart, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import logo from "@/assets/lumicycle-logo.png";
@@ -63,17 +63,8 @@ export const Header = () => {
             ))}
           </nav>
 
-          {/* Cart & Mobile Menu */}
+          {/* Mobile Menu */}
           <div className="flex items-center gap-4">
-            <Link to="/cart">
-              <Button variant="ghost" size="icon" className="relative hover:bg-secondary">
-                <ShoppingCart className="h-10 w-10" />
-                <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-xs rounded-full w-5 h-5 flex items-center justify-center">
-                  0
-                </span>
-              </Button>
-            </Link>
-
             {/* Mobile Menu Button */}
             <Button
               variant="ghost"

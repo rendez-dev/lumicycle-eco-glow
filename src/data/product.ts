@@ -15,16 +15,17 @@ export interface Product {
     capacity?: string;
     technology?: string;
   };
+  storyTitle: string;
   story: string;
 }
 
 // Single featured product with multiple angles
 export const featuredProduct: Product = {
   id: "ecoglow-bottle-001",
-  name: "EcoGlow Bottle",
+  name: "Lampu tidur",
   description: "Botol minum LED daur ulang dengan teknologi self-cleaning UV. Inovasi terbaru dalam gaya hidup berkelanjutan yang menggabungkan fungsi, teknologi, dan estetika futuristik.",
   price: 100000,
-  category: "Bottles",
+  category: "Lampu ",
   images: [
     {
       id: "img-1",
@@ -93,6 +94,7 @@ export const featuredProduct: Product = {
     capacity: "500ml",
     technology: "UV-C LED Self-Cleaning System",
   },
+  storyTitle: "Our Story",
   story: `
     EcoGlow Bottle lahir dari visi untuk mengubah sampah plastik menjadi produk yang tidak hanya fungsional, 
     tetapi juga indah dan berteknologi tinggi. Setiap botol dibuat dari plastik daur ulang yang dikumpulkan 
