@@ -26,10 +26,17 @@ export default function Contact() {
       const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
       // Validasi apakah EmailJS credentials sudah dikonfigurasi
-      if (!serviceId || !templateId || !publicKey || 
-          serviceId === "YOUR_SERVICE_ID" || 
-          templateId === "YOUR_TEMPLATE_ID" || 
-          publicKey === "YOUR_PUBLIC_KEY") {
+      // Hanya cek jika benar-benar kosong atau placeholder
+      const isPlaceholder = (value: string | undefined) => {
+        if (!value) return true;
+        const trimmed = value.trim();
+        return trimmed === "" || 
+               trimmed === "YOUR_SERVICE_ID" || 
+               trimmed === "YOUR_TEMPLATE_ID" || 
+               trimmed === "YOUR_PUBLIC_KEY";
+      };
+
+      if (isPlaceholder(serviceId) || isPlaceholder(templateId) || isPlaceholder(publicKey)) {
         toast.error("EmailJS belum dikonfigurasi. Silakan hubungi kami melalui WhatsApp atau email.");
         setIsSubmitting(false);
         return;
@@ -51,9 +58,15 @@ export default function Contact() {
 
       toast.success("Pesan Anda telah terkirim! Kami akan segera menghubungi Anda.");
       setFormData({ name: "", email: "", message: "" });
-    } catch (error) {
+    } catch (error: any) {
       console.error("Error sending email:", error);
-      toast.error("Terjadi kesalahan saat mengirim pesan. Silakan coba lagi atau hubungi kami melalui WhatsApp.");
+      
+      // Berikan pesan error yang lebih informatif
+      if (error?.text?.includes("Invalid") || error?.status === 400) {
+        toast.error("Kredensial EmailJS tidak valid. Silakan hubungi kami melalui WhatsApp atau email.");
+      } else {
+        toast.error("Terjadi kesalahan saat mengirim pesan. Silakan coba lagi atau hubungi kami melalui WhatsApp.");
+      }
     } finally {
       setIsSubmitting(false);
     }

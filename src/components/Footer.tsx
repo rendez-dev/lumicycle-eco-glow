@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Instagram, Mail } from "lucide-react";
+import { Instagram } from "lucide-react";
 import logo from "@/assets/lumicycle-logo.png";
 
 export const Footer = () => {
@@ -82,12 +82,6 @@ export const Footer = () => {
                 className="w-10 h-10 rounded-full bg-secondary hover:bg-primary transition-colors flex items-center justify-center group"
               >
                 <Instagram className="h-5 w-5 text-muted-foreground group-hover:text-primary-foreground" />
-              </a>
-              <a
-                href="mailto:hello@lumicycle.com"
-                className="w-10 h-10 rounded-full bg-secondary hover:bg-primary transition-colors flex items-center justify-center group"
-              >
-                <Mail className="h-5 w-5 text-muted-foreground group-hover:text-primary-foreground" />
               </a>
             </div>
           </div>
