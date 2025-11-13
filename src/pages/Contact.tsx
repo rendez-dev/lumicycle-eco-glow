@@ -21,9 +21,19 @@ export default function Contact() {
     try {
       // Ganti dengan EmailJS credentials Anda
       // Anda bisa mendapatkan ini dari https://www.emailjs.com/
-      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || "YOUR_SERVICE_ID";
-      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "YOUR_TEMPLATE_ID";
-      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "YOUR_PUBLIC_KEY";
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+      // Validasi apakah EmailJS credentials sudah dikonfigurasi
+      if (!serviceId || !templateId || !publicKey || 
+          serviceId === "YOUR_SERVICE_ID" || 
+          templateId === "YOUR_TEMPLATE_ID" || 
+          publicKey === "YOUR_PUBLIC_KEY") {
+        toast.error("EmailJS belum dikonfigurasi. Silakan hubungi kami melalui WhatsApp atau email.");
+        setIsSubmitting(false);
+        return;
+      }
 
       // Kirim email menggunakan EmailJS
       // Template menggunakan: {{name}}, {{email}}, {{message}}, {{title}}
