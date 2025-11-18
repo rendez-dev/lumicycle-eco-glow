@@ -76,7 +76,7 @@ export const Footer = () => {
                 </svg>
               </a>
               <a
-                href="https://instagram.com/lumicycle"
+                href="https://www.instagram.com/gibran_rakabuming"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-secondary hover:bg-primary transition-colors flex items-center justify-center group"
