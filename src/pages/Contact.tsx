@@ -56,7 +56,7 @@ export default function Contact() {
         publicKey
       );
 
-      toast.success("Pesan Anda telah terkirim.");
+      toast.success("Pesan Anda telah terkirim, Kami akan segera menghubungi Anda.");
       setFormData({ name: "", email: "", message: "" });
     } catch (error: any) {
       console.error("Error sending email:", error);
